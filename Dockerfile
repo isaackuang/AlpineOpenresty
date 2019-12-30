@@ -1,8 +1,8 @@
-FROM isaackuang/alpine-base:3.8.0
+FROM isaackuang/alpine-base:3.10
 
-ARG RESTY_VERSION="1.13.6.1"
-ARG RESTY_OPENSSL_VERSION="1.0.2q"
-ARG RESTY_PCRE_VERSION="8.42"
+ARG RESTY_VERSION="1.15.8.2"
+ARG RESTY_OPENSSL_VERSION="1.1.1d"
+ARG RESTY_PCRE_VERSION="8.43"
 ARG RESTY_J="1"
 ARG RESTY_CONFIG_OPTIONS="\
     --prefix=/etc/openresty \
@@ -59,9 +59,9 @@ RUN apk add --no-cache --virtual .build-deps \
         openresty-${RESTY_VERSION}.tar.gz openresty-${RESTY_VERSION} \
         pcre-${RESTY_PCRE_VERSION}.tar.gz pcre-${RESTY_PCRE_VERSION} && \
     cd /tmp && \
-    wget http://luarocks.github.io/luarocks/releases/luarocks-3.0.4.tar.gz && \
-    tar zxvf luarocks-3.0.4.tar.gz && \
-    cd luarocks-3.0.4/ && \
+    wget http://luarocks.github.io/luarocks/releases/luarocks-3.2.1.tar.gz && \
+    tar zxvf luarocks-3.2.1.tar.gz && \
+    cd luarocks-3.2.1/ && \
     ./configure \
         --prefix=/etc/openresty/luajit/ \
         --with-lua-bin=/etc/openresty/luajit/bin \
