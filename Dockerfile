@@ -1,4 +1,4 @@
-FROM isaackuang/alpine-base:3.10
+FROM isaackuang/alpine-base:3.9
 
 ARG RESTY_VERSION="1.15.8.2"
 ARG RESTY_OPENSSL_VERSION="1.1.1d"
