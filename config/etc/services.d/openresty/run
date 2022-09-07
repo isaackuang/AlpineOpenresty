@@ -1,2 +1,2 @@
 #!/bin/sh
-/etc/openresty/bin/openresty
+/usr/bin/openresty
